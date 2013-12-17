@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  city: MyString
+  county: MyString
+  country: MyString
+  start_at: 2013-12-17 14:59:01
+
+two:
+  name: MyString
+  description: MyText
+  city: MyString
+  county: MyString
+  country: MyString
+  start_at: 2013-12-17 14:59:01

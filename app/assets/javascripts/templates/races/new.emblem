@@ -1,0 +1,24 @@
+h2 Créer une nouvelle course
+
+form submit="createRace"
+  label Nom
+  input name="name"
+  br
+  label Description
+  textarea name="description"
+  br
+  label Ville
+  input name="city"
+  br
+  label Région
+  input name="county"
+  br
+  label Pays
+  input name="country"
+  br
+  label Début
+  input name="start_at"
+  br
+  button action="createRace" Créer
+
+= linkTo "races" | Retour à la liste des courses

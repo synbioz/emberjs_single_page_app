@@ -1,0 +1,25 @@
+h2 Modifier la course
+
+form submit="updateRace"
+  label Nom
+  input name="name" value=name
+  br
+  label Description
+  textarea name="description"
+    description
+  br
+  label Ville
+  input name="city" value=city
+  br
+  label Région
+  input name="county" value=county
+  br
+  label Pays
+  input name="country" value=country
+  br
+  label Début
+  input name="start_at" value=start_at
+  br
+  button action="updateRace" Modifier
+
+a click="goToIndexView" href="/#/races" Retour à la liste des courses

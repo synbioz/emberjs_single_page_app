@@ -1,0 +1,9 @@
+h2 Listes des courses
+ul
+  each model
+    li
+      = linkTo "race" this | #{name}
+  else
+    li Il n'y a aucune courses pour le moment.
+
+= linkTo "races.new" | Créer une course

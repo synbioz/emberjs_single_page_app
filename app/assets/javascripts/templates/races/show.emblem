@@ -1,0 +1,9 @@
+iougyftrd
+h2= name
+
+p= description
+
+p = id
+
+a click="goToIndexView" href="/#/races" Retour à la liste des courses
+a click="goToEditView" href="/#/races/" Retour à la liste des courses
