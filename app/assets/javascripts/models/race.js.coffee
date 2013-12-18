@@ -4,4 +4,4 @@ EmberjsSinglePageApp.Race = DS.Model.extend
   city: DS.attr('string')
   county: DS.attr('string')
   country: DS.attr('string')
-  start_at: DS.attr('string')
+  start_at: DS.attr('date')
