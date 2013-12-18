@@ -5,8 +5,7 @@ form submit="updateRace"
   input name="name" value=name
   br
   label Description
-  textarea name="description"
-    description
+  textarea name="description" value=description
   br
   label Ville
   input name="city" value=city
@@ -22,4 +21,6 @@ form submit="updateRace"
   br
   button action="updateRace" Modifier
 
-a click="goToIndexView" href="/#/races" Retour à la liste des courses
+= linkTo "race" this | Voir la course
+br
+= linkTo "races" | Retour à la liste des courses

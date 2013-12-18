@@ -1,9 +1,11 @@
-iougyftrd
 h2= name
 
 p= description
 
-p = id
+p Lieu : #{city} - #{county} (#{country})
 
-a click="goToIndexView" href="/#/races" Retour à la liste des courses
-a click="goToEditView" href="/#/races/" Retour à la liste des courses
+button{action "delete"} Supprimer la course
+br
+= linkTo "races.edit" this | Modifier la course
+br
+= linkTo "races" | Retour à la liste des courses

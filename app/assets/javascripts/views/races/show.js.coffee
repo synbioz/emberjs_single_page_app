@@ -1,2 +1,2 @@
-EmberjsSinglePageApp.RacesShowView = Ember.View.extend
+EmberjsSinglePageApp.RaceView = Ember.View.extend
   templateName: "races/show"

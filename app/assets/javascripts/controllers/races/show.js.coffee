@@ -1,5 +1,8 @@
-EmberjsSinglePageApp.RaceShowController = Ember.ObjectController.extend
+EmberjsSinglePageApp.RaceController = Ember.ObjectController.extend
   actions:
-    deleteRace: ->
-      console.log "delete"
+    delete: ->
+      race = @store.find('race', @get('model.id'))
+      race.deleteRecord()
+      race.save()
+
       @transitionToRoute('races')

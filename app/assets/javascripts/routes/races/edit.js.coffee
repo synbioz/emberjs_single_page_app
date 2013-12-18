@@ -1,7 +1,6 @@
-EmberjsSinglePageApp.RaceEditRoute = Ember.Route.extend
-  model: ->
-    console.log "ygu"
-    @store.find('race', params.race_id)
+EmberjsSinglePageApp.RacesEditRoute = Ember.Route.extend
+  model: (params) ->
+    @store.find 'race', params.race_id
 
-  setupController: (controller, races) ->
-    controller.set 'content', {}
+  setupController: (controller, race) ->
+    controller.set 'model', race

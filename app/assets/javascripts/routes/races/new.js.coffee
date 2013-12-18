@@ -1,6 +1,6 @@
 EmberjsSinglePageApp.RacesNewRoute = Ember.Route.extend
   model: ->
-    @store.find('race')
+    @store.find 'race'
 
-  setupController: (controller, races) ->
-    controller.set 'content', {}
+  setupController: (controller) ->
+    controller.set 'model'

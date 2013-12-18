@@ -5,6 +5,3 @@ EmberjsSinglePageApp.Race = DS.Model.extend
   county: DS.attr('string')
   country: DS.attr('string')
   start_at: DS.attr('string')
-
-  showUrl: ->
-    "/#/races/" + @get('id')
