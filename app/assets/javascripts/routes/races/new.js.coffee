@@ -3,4 +3,4 @@ EmberjsSinglePageApp.RacesNewRoute = Ember.Route.extend
     @store.find 'race'
 
   setupController: (controller) ->
-    controller.set 'model'
+    controller.startEditing()

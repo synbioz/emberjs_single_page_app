@@ -1,0 +1,10 @@
+.error {
+  color: red;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.links:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

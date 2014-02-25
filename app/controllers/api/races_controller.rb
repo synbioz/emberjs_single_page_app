@@ -13,9 +13,11 @@ class Api::RacesController < ApplicationController
 
   def create
     @race = Race.new race_parameters
-    @race.save
-
-    respond_with @race, location: api_race_path(@race)
+    if @race.save
+      respond_with @race, location: api_race_path(@race)
+    else
+      render json: { errors: @race.errors }, status: :unprocessable_entity
+    end
   end
 
   def update

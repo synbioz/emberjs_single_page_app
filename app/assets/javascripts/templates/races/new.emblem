@@ -2,7 +2,9 @@ h2 Créer une nouvelle course
 
 form submit="createRace"
   label Nom
-  input name="name"
+  Ember.TextField valueBinding='name' name='name'
+  if errors
+    span.error= errors.errors.name
   br
   label Description
   textarea name="description"
@@ -17,8 +19,10 @@ form submit="createRace"
   input name="country"
   br
   label Début
-  input name="start_at"
+  Ember.TextField valueBinding='start_at' name='start_at'
+  if errors
+    span.error= errors.errors.start_at
   br
   button action="createRace" Créer
 
-= linkTo "races" | Retour à la liste des courses
+a class="links" click="cancel" Retour à la liste des courses
