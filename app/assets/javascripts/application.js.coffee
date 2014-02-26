@@ -4,6 +4,7 @@
 #= require handlebars
 #= require ember
 #= require ember-data
+#= require ember-validations
 #= require_self
 #= require emberjs_single_page_app
 #= require_tree .

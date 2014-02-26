@@ -4,7 +4,7 @@ form submit="createRace"
   label Nom
   Ember.TextField valueBinding='name' name='name'
   if errors
-    span.error= errors.errors.name
+    span.error= errors.name
   br
   label Description
   textarea name="description"
@@ -13,7 +13,9 @@ form submit="createRace"
   input name="city"
   br
   label Région
-  input name="county"
+  Ember.TextField valueBinding='county' name='county'
+  if errors
+    span.error= errors.county
   br
   label Pays
   input name="country"
@@ -21,7 +23,7 @@ form submit="createRace"
   label Début
   Ember.TextField valueBinding='start_at' name='start_at'
   if errors
-    span.error= errors.errors.start_at
+    span.error= errors.start_at
   br
   button action="createRace" Créer
 

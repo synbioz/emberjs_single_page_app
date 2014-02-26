@@ -9,16 +9,19 @@ EmberjsSinglePageApp.RacesNewController = Ember.ObjectController.extend
   errors: null
 
   startEditing: ->
-    @race   = EmberjsSinglePageApp.Race.createRecord({})
+    @race = EmberjsSinglePageApp.Race.createRecord({})
     @set "model", @race
+
+    for attr in Ember.get(EmberjsSinglePageApp.Race, 'attributes').keys.list
+      @set(attr, null)
 
   rollbackModel: ->
     if @race.get("isDirty")
       @set('errors', null)
-      for attr in Ember.keys(Ember.meta(EmberjsSinglePageApp.Race.proto()).descs)
+      for attr in Ember.get(EmberjsSinglePageApp.Race, 'attributes').keys.list
         @set(attr, null)
 
-      @race.rollback() 
+      @race.rollback()
       @race.deleteRecord()
 
   actions:
@@ -28,11 +31,11 @@ EmberjsSinglePageApp.RacesNewController = Ember.ObjectController.extend
       for param in params
         @race.set(param.name, param.value)
 
-      @race.save().then( () =>
+      @race.validate().then( =>
+        @race.save()
         @transitionToRoute('races')
-      , (errors) =>
-        @set('errors', errors)
-        @race.deleteRecord()
+      , () =>
+        @set('errors', @race.get("errors"))
       )
 
     cancel: ->
