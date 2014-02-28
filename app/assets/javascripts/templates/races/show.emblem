@@ -6,6 +6,6 @@ p Lieu : #{city} - #{county} (#{country})
 
 button{action "delete"} Supprimer la course
 br
-= linkTo "races.edit" this | Modifier la course
+= link-to "races.edit" this | Modifier la course
 br
-= linkTo "races" | Retour à la liste des courses
+= link-to "races" | Retour à la liste des courses

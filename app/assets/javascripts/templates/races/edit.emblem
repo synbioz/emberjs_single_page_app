@@ -21,6 +21,6 @@ form submit="updateRace"
   br
   button action="updateRace" Modifier
 
-= linkTo "race" this | Voir la course
+= link-to "race" this | Voir la course
 br
-= linkTo "races" | Retour à la liste des courses
+= link-to "races" | Retour à la liste des courses
